@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "browsers": "cross-env PLAYWRIGHT_BROWSERS_PATH=.browsers playwright install chromium",
+    "browsers:all": "cross-env PLAYWRIGHT_BROWSERS_PATH=.browsers playwright install",
+    "test": "cross-env PLAYWRIGHT_BROWSERS_PATH=.browsers playwright test --project=chromium",
+    "test:headed": "cross-env PLAYWRIGHT_BROWSERS_PATH=.browsers playwright test --project=chromium --headed",
+    "test:ui": "cross-env PLAYWRIGHT_BROWSERS_PATH=.browsers playwright test --ui",
+    "test:debug": "cross-env PLAYWRIGHT_BROWSERS_PATH=.browsers playwright test --project=chromium --debug",
+    "test:all": "cross-env PLAYWRIGHT_BROWSERS_PATH=.browsers playwright test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "cross-env": "^10.1.0"
+  }
+}
